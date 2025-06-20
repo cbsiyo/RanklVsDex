@@ -1,0 +1,12 @@
+library(tidyverse)
+library(clusterProfiler)
+library(AnnotationDbi)
+library(org.Mm.eg.db)
+
+sigs <- read.csv("resultofdeseq2.csv", row.names = 1)
+goiup <- rownames(subset(sigs, log2FoldChange > 0.5 & padj < 0.05))
+resgoiup <- enrichGO(gene = goiup, OrgDb = org.Mm.eg.db, keyType = "ENSEMBL", ont = "BP")
+upplot <- plot(barplot(resgoi, showCategory = 10))
+goidown <- rownames(subset(sigs, log2FoldChange < -0.5 & padj < 0.05))
+resgoidown <- enrichGO(gene = goidown, OrgDb = org.Mm.eg.db, keyType = "ENSEMBL", ont = "BP")
+downplot <- plot(barplot(resgoidown, showCategory = 10))
