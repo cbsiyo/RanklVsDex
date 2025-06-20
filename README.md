@@ -1,1 +1,6 @@
 # RanklVsDex
+This transcriptomics study investigates how dexamethasone (Dex) affects osteoclast precursor cells (OPCs) in glucocorticoid-induced osteonecrosis (GIONFH). Using RNA-Seq data from mouse bone marrow OPCs (GEO GSE298117), we compared cells treated with RANKL alone versus RANKL+Dex (10⁻⁸ M) to resolve the "Dex paradox" - its dual effects on bone resorption. 
+
+Analysis with DESeq2 revealed Dex induces widespread transcriptional changes in OPCs, particularly activating vascular-related genes and survival pathways like PI3K/PKB. Functional enrichment using clusterProfiler showed Dex upregulates processes including endothelial cell migration and oxidative phosphorylation, suggesting it enhances OPC mobility and metabolic activity. These findings clarify how low-dose Dex directly stimulates osteoclastogenesis through metabolic reprogramming and survival pathway activation, contributing to GIONFH development.
+
+The study provides mechanistic insights into Dex's bone-resorbing effects, highlighting potential therapeutic targets. Data analysis employed standard bioinformatics tools (DESeq2 for differential expression; clusterProfiler for pathway analysis), with full methodological details and references available in the original report. This work advances understanding of glucocorticoid-induced bone loss and informs future therapeutic strategies.
